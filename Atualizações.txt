@@ -1,0 +1,149 @@
+Para implementar:
+- estilizar as bolinhas da seleção de classes
+- pensar na história do aplicacao
+- aprender sobre a leitura de arquivos para poder salvar o aplicacao;
+- modificar a maneira em que o layout do menu principal foi desenvolvido para eliminar a "gambiarra" do título estar
+  empurrando a caixa de botões para ela ficar no meio
+- criar uma espécie de histórico de locais já visitados
+- alternar a ordem dos botões que linkam os lugares, de acordo com o último lugar visitado
+- aumentar a margem do botão da introdução para não ficar tão colado com a caixa de história
+- vários bugs na barra de vida
+- //pensar em outros possíveis adversários de combate
+- //painel com textos de combate precisa acompanhar o texto que vai sendo adicionado quando "fugir" ou "atacar" é clicado
+
+At 0.30
+- Código comentado;
+- Método de acabar o combate criado na classe de Combate;
+- Adição de mais tamanhos padronizados nas Configurações;
+- Organização do código da classe Combate;
+- Caminho do arquivo das imagens dos monstros, agora dentro das características dos monstros em ListaMonstros;
+- Alteração e simplificação da chamada de método de adicionar e zerar o LogCombate;
+- Otimização do código da linkagem de lugares, nos métodos de Exploração e Portas;
+- Reformulação da classe Link para ela só ficar responsável pela alternância de locais;
+- Pacote para combates criado;
+- Criação da classe estática Encontros para gerenciar os possíveis encontros ao avançar pelo mapa;
+- Criação da classe estática Acoes para configurar como as ações dos combates são executadas
+- Ataques do jogador e monstro agora com possibilidade de serem críticos ou falhas;
+- Padronização de todos os tipos de botões (Opção, Link e Ação) para herdarem de Btn;
+- Modificação do nível de desafio do jogo através da mudança do sistema de cura ao derrotar um monstro.
+
+At 0.29
+- criação do pacote ranking;
+- arquivo de texto, classe que lê e escreve arquivos responsáveis pelo ranking;
+- classe que armazena informações do jogador;
+- classe que compara todas as pontuações;
+- classe que lê o ranking e mostra a partir do menu e classe que escreve (cria) o ranking no final do jogo;
+  apenas se o jogador entrou para a lista.
+
+At 0.28
+- Diminuição da fonte e inserção de um scroll para o log de combate;
+- Padronização de alguns tamanhos nas configurações.
+
+At 0.27
+- Mudança nas dimensões da interface do jogo;
+- Mudança no nome do jogo;
+- Código base para inserção da imagem do adversário de combate.
+
+At 0.26
+- Imagens dos locais dos jogos aparecem na tela.
+
+At 0.25 <- Versão jogável
+- Revertida a escolha por atributos de telas sendo variáveis locais de métodos, para se ter uma melhor organização;
+- Padronização de uma classe para cabeçalhos;
+- Reorganização dos componentes da criação de personagem;
+- Atributos de um novo personagem sendo setados no próprio construtor do personagem e não na classe Jogo;
+- Novas descrições para cada classe;
+- Telas pré jogo todas prontas.
+
+At 0.24 <- Versão jogável
+- Atributos de telas se transformando em variáveis locais de métodos;
+- Novo posicionamento do botão de continuar na tela de introdução;
+- Corrigido bug de não renderizar telas de combate.
+
+At 0.23 <- Versão bugável
+- Correção do atributo cards do gerenciador de interfaces com visibilidade pública;
+- Exclusão da classe abstrata Interface, sendo agora utilizada apenas a classe Container;
+- Organização dos pacotes das interfaces aplicação;
+- Padronização de componentes que são botões de ação para entrar em outra tela;
+- Mudança de nomes de classes da interface do menu principal;
+- Otimização do código do menu principal;
+- Interfaces de introdução e criação de personagem sendo instanciadas só depois da intenção de começar um novo jogo;
+- Nova classe de scroll padronizado criado;
+- Substituído a alternância de caixas de histórias na tela de introdução, para uma barra de rolagem;
+- Otimização do código da tela de introdução;
+- Nome provisório escolhido - The Castle.
+
+At 0.22 <- Primeira versão jogável
+- Botões de ação adicionados à tela de combate;
+- Botão de fuga funcionando através da probabilidade de acordo com os atributos de velocidade do jogador e monstro;
+- Se a fuga fracassar, jogador toma o dano do monstro;
+- Botão de ataque funcionando;
+- Ataques dando dano através da força do jogador e poder do monstro;
+- Adicionado um log de combate, descrevendo as ações tomadas;
+- Ordem de ataques decidido através das velocidades do jogador e monstro;
+- Combate termina caso jogador fuja ou um dos dois morra;
+- Se o jogador morrer, é gameover;
+- Ao chegar nos portões, jogador pode vencer o aplicacao.
+
+At 0.21
+- Monstros são criados aleatoriamente de acordo com a movimentação pelo castelo;
+- Primeira versão da tela de combate, já funcionando ao encontrar um monstro;
+- Quando se sai da tela de combate, o aplicacao volta para a tela de exploração com o local certo;
+- Criação de um nível de perigo ao aplicacao, que se consiste em aumentar a chance que aparecerá um monstro ao decorrer
+do deslocamento do personagem;
+- Primeira versão da classe monstro foi criada;
+- Criado um Enum para diversificar os monstros;
+- Primeiro monstro genérico criado -Esqueleto.
+
+At 0.20
+- linkagem das portas aos lugares do mapa (implementação de um arraylist <Link> caminhos);
+- correção do bug de aceitar início do aplicacao sem nome (ou com nome só de espaços);
+- correção do bug de nenhum botão de personagem estar selecionado na criação;
+- ajustes no mapa (foto enviada no whats);
+- instanciação de Random na classe CriacaoPersonagem para geração aleatória de números de
+  lugares do mapa nos quais acontecerão os combates.
+
+At 0.19
+- Redução da complexidade e número de classes necessárias para o funcionamento da navegação do aplicacao;
+- Criação da classe "Link" e "Portas" para o funcionamento da navegação;
+- Adição de alguns locais ao mapa.
+
+At 0.18
+- Início da tela jogável;
+- Criação das barras de vida e mana na tela de exploração;
+- Localidade posicionada no canto superior direito da tela de exploração;
+- Conversão do tamanho da tela com o tamanho das barras de vida e mana;
+- Texto descritivo do local adicionado à tela de exploração;
+- Nome do local alternado dinamicamente de acordo com o local atual;
+- Botões para mudança de local foram adicionados;
+- Padronização da forma de ancoragem dos botões para a mudança de localidade.
+
+At 0.17
+- Otimização do código da tela de introdução;
+- Otimização do código da tela de criação de personagem;
+- Organização do layout da tela de criação de personagem;
+- Padronização de tamanhos de componentes gerais.
+
+At 0.16
+- Espaçamento dos botões no menu;
+- Otimização do código do menu principal;
+- Componentização da tela de introdução;
+- Possibilidade de aumentar o conteúdo da tela de introdução;
+- Modificação dos botões da tela de introdução;
+- Esboço do primeiro background do aplicacao.
+
+At 0.15
+- Criação de uma classe controladora para o aplicacao;
+- Passagem dos dados do novo personagem criado para a classe controladora.
+
+At 0.08
+- Atualização dos componentes de labels e inputs;
+- Criação de componentes para botões radio;
+- Inserção de nome e gênero concluído na tela de criação de personagem;
+- Conclusão das mudanças de conteúdo na parte de descrições de cada classe;
+- Inserção de um botão para finalizar a criação.
+
+At 0.07
+- Criação da tela de introdução ao background do aplicacao;
+- Padronização dos componentes de cabeçalhos, labels e inputs;
+- Início da criação da tela de criação de personagem.
